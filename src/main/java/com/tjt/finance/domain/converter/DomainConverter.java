@@ -17,4 +17,5 @@ public interface DomainConverter {
     VoucherClause getVoucherClause(VoucherClauseModel model);
 
     VoucherClauseModel getVoucherClauseModel(VoucherClause voucherClause);
+
 }

@@ -4,6 +4,11 @@
  */
 package com.tjt.finance.repository.dataobject;
 
+import org.springframework.stereotype.Component;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,37 +17,51 @@ import java.util.Date;
  * @author 十神
  * @version $Id: VoucherInfo.java, v 0.1 2018年02月12日 上午11:05 tianjiatian Exp $
  */
+
+@Entity
+@Component
 public class VoucherInfo implements Serializable {
     private static final long serialVersionUID = -4165890148885064249L;
 
     /** 主键id */
+    @Id
+    @Column(name = "id")
     private Integer id;
 
     /** 凭证id */
+    @Column(name = "voucher_id")
     private String voucherId;
 
     /** 凭证序号 */
+    @Column(name = "voucher_serial")
     private String voucherSerial;
 
     /** 创建时间 */
+    @Column(name = "gmt_create")
     private Date gmtCreate;
 
     /** 最后修改时间 */
+    @Column(name = "gmt_modified")
     private Date gmtModified;
 
     /** 公司名称 */
+    @Column(name = "company")
     private String company;
 
     /** 制单人 */
-    private String creattorName;
+    @Column(name = "creator_name")
+    private String creatorName;
 
     /** 审核人 */
+    @Column(name = "checker_name")
     private String checkerName;
 
     /** 记账人 */
+    @Column(name = "accountor_name")
     private String accountorName;
 
     /** 附件张数 */
+    @Column(name = "attach_num")
     private String attachNum;
 
 
@@ -143,19 +162,19 @@ public class VoucherInfo implements Serializable {
     }
 
     /**
-     * Getter method for property <tt>creattorName</tt>.
-     * @return property value of creattorName
+     * Getter method for property <tt>creatorName</tt>.
+     * @return property value of creatorName
      */
-    public String getCreattorName() {
-        return creattorName;
+    public String getCreatorName() {
+        return creatorName;
     }
 
     /**
      * Setter method for property <tt>counterType</tt>.
-     * @param creattorName value to be assigned to property creattorName
+     * @param creatorName value to be assigned to property creatorName
      */
-    public void setCreattorName(String creattorName) {
-        this.creattorName = creattorName;
+    public void setCreatorName(String creatorName) {
+        this.creatorName = creatorName;
     }
 
     /**

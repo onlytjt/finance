@@ -4,8 +4,14 @@
  */
 package com.tjt.finance.controller;
 
+import com.tjt.finance.repository.dataobject.VoucherClause;
+import com.tjt.finance.repository.repo.VoucherClauseRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 /**
  *
@@ -15,9 +21,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HelloController {
-    @RequestMapping("/hello")
-    public String hello() {
-        return "index.html";
+
+    @Autowired
+    private VoucherClauseRepository voucherClauseRepository;
+
+    @RequestMapping("hello")
+    public ModelAndView hello() {
+        ModelAndView model = new ModelAndView("index");
+
+        List<VoucherClause> voucherClauseList = voucherClauseRepository.findVoucherClausesByVoucherId("voucher001");
+        model.addObject("voucherClauseList", voucherClauseList);
+
+        return model;
     }
 
 }

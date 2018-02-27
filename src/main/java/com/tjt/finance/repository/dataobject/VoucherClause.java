@@ -4,6 +4,10 @@
  */
 package com.tjt.finance.repository.dataobject;
 
+import org.springframework.stereotype.Component;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,11 +16,15 @@ import java.util.Date;
  * @author 十神
  * @version $Id: VoucherClause.java, v 0.1 2018年02月12日 下午2:38 tianjiatian Exp $
  */
+
+@Entity
+@Component
 public class VoucherClause implements Serializable {
 
     private static final long serialVersionUID = 7893218412076694753L;
 
     /** 主键id */
+    @Id
     private Integer id;
 
     /** 凭证id */

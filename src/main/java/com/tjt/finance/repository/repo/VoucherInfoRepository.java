@@ -7,6 +7,8 @@ package com.tjt.finance.repository.repo;
 import com.tjt.finance.repository.dataobject.VoucherInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 /**
  *
  * @author 十神
@@ -14,4 +16,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface VoucherInfoRepository extends JpaRepository<VoucherInfo, Integer> {
 
+    List<VoucherInfo> findByVoucherId(String voucherId);
 }

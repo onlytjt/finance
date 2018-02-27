@@ -4,6 +4,8 @@
  */
 package com.tjt.finance.domain.model;
 
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -13,6 +15,8 @@ import java.util.List;
  * @author 十神
  * @version $Id: VoucherInfoModel.java, v 0.1 2018年02月12日 下午2:40 tianjiatian Exp $
  */
+
+@Component
 public class VoucherInfoModel implements Serializable {
 
     private static final long serialVersionUID = -4809769932174876421L;
@@ -36,7 +40,7 @@ public class VoucherInfoModel implements Serializable {
     private String company;
 
     /** 制单人 */
-    private String creattorName;
+    private String creatorName;
 
     /** 审核人 */
     private String checkerName;
@@ -147,19 +151,19 @@ public class VoucherInfoModel implements Serializable {
     }
 
     /**
-     * Getter method for property <tt>creattorName</tt>.
-     * @return property value of creattorName
+     * Getter method for property <tt>creatorName</tt>.
+     * @return property value of creatorName
      */
-    public String getCreattorName() {
-        return creattorName;
+    public String getCreatorName() {
+        return creatorName;
     }
 
     /**
      * Setter method for property <tt>counterType</tt>.
-     * @param creattorName value to be assigned to property creattorName
+     * @param creatorName value to be assigned to property creatorName
      */
-    public void setCreattorName(String creattorName) {
-        this.creattorName = creattorName;
+    public void setCreatorName(String creatorName) {
+        this.creatorName = creatorName;
     }
 
     /**

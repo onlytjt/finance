@@ -14,5 +14,7 @@ import java.io.Serializable;
 public class FinanceConstants implements Serializable {
     private static final long serialVersionUID = 4553215098099603559L;
 
-    public static final String ADD_VOUCHER = "/finance/voucher/add";
+    public static final String SUBMIT_VOUCHER = "finance/voucher/submit";
+
+    public static final String QUERY_VOUCHER = "finance/voucher/query";
 }
