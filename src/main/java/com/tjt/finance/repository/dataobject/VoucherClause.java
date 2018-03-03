@@ -4,9 +4,13 @@
  */
 package com.tjt.finance.repository.dataobject;
 
+import com.tjt.finance.core.model.ToString;
 import org.springframework.stereotype.Component;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
@@ -19,12 +23,14 @@ import java.util.Date;
 
 @Entity
 @Component
-public class VoucherClause implements Serializable {
+public class VoucherClause extends ToString implements Serializable {
 
     private static final long serialVersionUID = 7893218412076694753L;
 
     /** 主键id */
     @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
 
     /** 凭证id */

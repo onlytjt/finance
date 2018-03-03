@@ -2,7 +2,7 @@
  * Alipay.com Inc.
  * Copyright (c) 2004-2018 All Rights Reserved.
  */
-package com.tjt.finance.core;
+package com.tjt.finance.core.config;
 
 import java.io.Serializable;
 
@@ -16,5 +16,7 @@ public class FinanceConstants implements Serializable {
 
     public static final String SUBMIT_VOUCHER = "finance/voucher/submit";
 
-    public static final String QUERY_VOUCHER = "finance/voucher/query";
+    public static final String CREATE_VOUCHER = "finance/voucher/create";
+
+    public static final String QUERY_VOUCHER = "finance/voucher/queryList";
 }

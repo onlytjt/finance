@@ -17,4 +17,8 @@ import java.util.List;
 public interface VoucherInfoRepository extends JpaRepository<VoucherInfo, Integer> {
 
     List<VoucherInfo> findByVoucherId(String voucherId);
+
+    List<VoucherInfo> findAll();
+
+    VoucherInfo save(VoucherInfo s);
 }

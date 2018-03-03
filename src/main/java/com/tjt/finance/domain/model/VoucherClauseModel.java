@@ -4,6 +4,8 @@
  */
 package com.tjt.finance.domain.model;
 
+import com.tjt.finance.core.model.ToString;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,7 +14,7 @@ import java.util.Date;
  * @author 十神
  * @version $Id: VoucherClauseModel.java, v 0.1 2018年02月12日 下午2:40 tianjiatian Exp $
  */
-public class VoucherClauseModel implements Serializable {
+public class VoucherClauseModel extends ToString implements Serializable {
 
     private static final long serialVersionUID = 1671235892815611066L;
 

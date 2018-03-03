@@ -16,4 +16,7 @@ import java.util.List;
  */
 public interface VoucherClauseRepository extends JpaRepository<VoucherClause, Integer> {
     List<VoucherClause> findVoucherClausesByVoucherId(String voucherId);
+
+    VoucherClause save(VoucherClause voucherClause);
+
 }

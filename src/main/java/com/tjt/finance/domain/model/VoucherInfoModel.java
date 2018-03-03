@@ -4,6 +4,7 @@
  */
 package com.tjt.finance.domain.model;
 
+import com.tjt.finance.core.model.ToString;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
@@ -17,7 +18,7 @@ import java.util.List;
  */
 
 @Component
-public class VoucherInfoModel implements Serializable {
+public class VoucherInfoModel extends ToString implements Serializable {
 
     private static final long serialVersionUID = -4809769932174876421L;
 
